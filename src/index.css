@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    font-size: 16px;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply bg-forge-bg text-forge-text font-sans;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-forge-muted rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-forge-accent;
+  }
+}
+
+@layer components {
+  /* Vertical slider utility */
+  .slider-vertical {
+    writing-mode: vertical-lr;
+    direction: rtl;
+    appearance: none;
+    cursor: pointer;
+    @apply rounded-full bg-forge-border;
+  }
+
+  .slider-vertical::-webkit-slider-thumb {
+    appearance: none;
+    @apply w-4 h-4 rounded-full bg-forge-accent shadow-lg;
+    margin-left: -4px;
+  }
+
+  /* Range input reset */
+  input[type='range'] {
+    @apply cursor-pointer;
+    appearance: none;
+    background: transparent;
+  }
+
+  input[type='range']::-webkit-slider-runnable-track {
+    @apply rounded-full bg-forge-border h-1;
+  }
+
+  input[type='range']::-webkit-slider-thumb {
+    appearance: none;
+    @apply w-4 h-4 rounded-full bg-forge-accent shadow-md;
+    margin-top: -6px;
+  }
+
+  input[type='range']:focus {
+    outline: none;
+  }
+
+  input[type='range']:focus::-webkit-slider-thumb {
+    @apply ring-2 ring-forge-accent/40;
+  }
+
+  /* Pill button */
+  .pill-btn {
+    @apply px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-150;
+  }
+
+  .pill-btn-active {
+    @apply bg-forge-accent text-white;
+  }
+
+  .pill-btn-inactive {
+    @apply bg-forge-border text-forge-text-dim hover:bg-forge-muted hover:text-forge-text;
+  }
+
+  /* Panel card */
+  .panel {
+    @apply bg-forge-panel border border-forge-border rounded-2xl;
+  }
+
+  /* Beat flash keyframe */
+  @keyframes beatFlash {
+    0% {
+      opacity: 1;
+      transform: scale(1.06);
+    }
+    100% {
+      opacity: 0.65;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes samGlow {
+    0% {
+      box-shadow: 0 0 0 0 rgba(201, 168, 76, 0.5);
+    }
+    50% {
+      box-shadow: 0 0 12px 4px rgba(201, 168, 76, 0.3);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(201, 168, 76, 0);
+    }
+  }
+
+  @keyframes recordPulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.4;
+    }
+  }
+
+  .animate-beat-flash {
+    animation: beatFlash 0.12s ease-out forwards;
+  }
+
+  .animate-sam-glow {
+    animation: samGlow 0.4s ease-out;
+  }
+
+  .animate-record-pulse {
+    animation: recordPulse 1.2s ease-in-out infinite;
+  }
+
+  /* Glass morphism for HUD */
+  .glass {
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    background: rgba(10, 10, 15, 0.85);
+  }
+}
+
+/* Touch-friendly tap targets */
+@media (pointer: coarse) {
+  button, [role='button'] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}

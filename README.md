@@ -1,4 +1,4 @@
-# TaalForge 🕉️
+# TaalForge 
 
 **TaalForge** is a modern, high-precision Classical Indian Music practice studio built for the browser. Whether you are practicing vocals, sitar, tabla, or kathak, TaalForge provides a professional-grade acoustic environment with drift-free rhythm and authentic instrument samples.
 

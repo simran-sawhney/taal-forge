@@ -52,10 +52,5 @@ TaalForge is actively evolving. Here are some of the planned features to take th
 - [ ] **Advanced Tabla Styles:** Adding Vilambit (slow) and Drut (fast) variations for all taals to better accompany different stages of Khayal or instrumental performances.
 - [ ] **MIDI Controller Support:** Map physical MIDI keyboards or drum pads to TaalForge's engine for live performances.
 
-## 🙏 Acknowledgements
-
-*   **Tanpura Audio:** High-quality MP3 drone samples sourced from [drshika/tanpura-app](https://github.com/drshika/tanpura-app).
-*   **Tabla Audio:** Authentic acoustic tabla strokes sourced from [simran-sawhney/naad-beats](https://github.com/simran-sawhney/naad-beats).
-
 ---
 *Built with precision and passion for Indian Classical Music.*

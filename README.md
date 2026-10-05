@@ -2,6 +2,9 @@
 
 **TaalForge** is a modern, high-precision Classical Indian Music practice studio built for the browser. Whether you are practicing vocals, sitar, tabla, or kathak, TaalForge provides a professional-grade acoustic environment with drift-free rhythm and authentic instrument samples.
 
+
+![TaalForge UI Preview](public/ui-preview.png)
+
 ## 🌟 Core Features
 
 *   **Professional Tanpura Drone:** Powered by authentic, high-quality studio MP3 recordings. Features independent channel controls, seamless crossfading, String 1 tuning (Pa, Ma, Ni), and micro-tuning (-50 to +50 cents) across octaves 2 to 4.
